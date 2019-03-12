@@ -20,10 +20,7 @@ class LokerAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'themes/css/colors/blue.css',
-        'themes/css/bootstrap-grid.css',
-        'themes/css/icons.css',
-        'themes/css/invoice.css',
+        'themes/css/colors/red.css',
         'themes/css/style.css'
     ];
     public $js = [

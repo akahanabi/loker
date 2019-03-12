@@ -1,3 +1,76 @@
+<?php
+    $this->title='Neang Gawe';
+?>
+
+<!-- Intro Banner
+================================================== -->
+<!-- add class "disable-gradient" to enable consistent background overlay -->
+<div class="intro-banner" data-background-image="themes/images/banner.jpg">
+	<div class="container">
+		
+		<!-- Intro Headline -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="banner-headline">
+					<h3>
+						<strong>Mudah, cepat, dan terpercaya.</strong>
+						<br>
+						<span>Perusahaan kecil hingga besar mengunakan <strong class="color">Neang Gawe</strong> untuk mencari pekerja-pekerja baru.</span>
+					</h3>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Search Bar -->
+		<div class="row">
+			<div class="col-md-12">
+				<div class="intro-banner-search-form margin-top-95">
+
+					<!-- Search Field -->
+					<div class="intro-search-field with-autocomplete">
+						<label for="autocomplete-input" class="field-title ripple-effect">Dimana?</label>
+						<div class="input-with-icon">
+							<input id="autocomplete-input" type="text" placeholder="Lokasi kerja">
+							<i class="icon-material-outline-location-on"></i>
+						</div>
+					</div>
+
+					<!-- Search Field -->
+					<div class="intro-search-field">
+						<label for ="intro-keywords" class="field-title ripple-effect">Pekerjaan apa?</label>
+						<input id="intro-keywords" type="text" placeholder="Kata kunci pekerjaan">
+					</div>
+
+					<!-- Button -->
+					<div class="intro-search-button">
+						<button class="button ripple-effect" onclick="window.location.href='jobs-list-layout-full-page-map.html'">Cari</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Stats -->
+		<div class="row">
+			<div class="col-md-12">
+				<ul class="intro-stats margin-top-45 hide-under-992px">
+					<li>
+						<strong class="counter">1,586</strong>
+						<span>Lowongan Diposting</span>
+					</li>
+					<li>
+						<strong class="counter">3,543</strong>
+						<span>Perusahaan</span>
+					</li>
+					<li>
+						<strong class="counter">1,232</strong>
+						<span>Pengguna</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
 
 <!-- Content
 ================================================== -->
@@ -17,96 +90,132 @@
 					<!-- Category Box -->
 					<a href="jobs-grid-layout-full-page.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-file-code-o"></i>
+							<i class="icon-line-awesome-shopping-cart"></i>
 						</div>
 						<div class="category-box-counter">612</div>
 						<div class="category-box-content">
-							<h3>Web & Software Dev</h3>
-							<p>Software Engineer, Web / Mobile Developer & More</p>
+							<h3>Perdagangan Umum</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-list-layout-full-page-map.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-cloud-upload"></i>
+							<i class="icon-line-awesome-bank"></i>
 						</div>
 						<div class="category-box-counter">113</div>
 						<div class="category-box-content">
-							<h3>Data Science & Analitycs</h3>
-							<p>Data Specialist / Scientist, Data Analyst & More</p>
+							<h3>Keuangan / Bank</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-list-layout-full-page-map.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-suitcase"></i>
+							<i class="icon-line-awesome-laptop"></i>
 						</div>
 						<div class="category-box-counter">186</div>
 						<div class="category-box-content">
-							<h3>Accounting & Consulting</h3>
-							<p>Auditor, Accountant, Fnancial Analyst & More</p>
+							<h3>Komputer / IT</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-list-layout-1.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-pencil"></i>
+							<i class="icon-line-awesome-money"></i>
 						</div>
 						<div class="category-box-counter">298</div>
 						<div class="category-box-content">
-							<h3>Writing & Translations</h3>
-							<p>Copywriter, Creative Writer, Translator & More</p>
+							<h3>Ritel</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-list-layout-2.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-pie-chart"></i>
+							<i class="icon-line-awesome-industry"></i>
 						</div>
 						<div class="category-box-counter">549</div>						
 						<div class="category-box-content">
-							<h3>Sales & Marketing</h3>
-							<p>Brand Manager, Marketing Coordinator & More</p>
+							<h3>Manufaktur</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-list-layout-1.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-image"></i>
+							<i class="icon-line-awesome-cutlery"></i>
 						</div>
 						<div class="category-box-counter">873</div>
 						<div class="category-box-content">
-							<h3>Graphics & Design</h3>
-							<p>Creative Director, Web Designer & More</p>
+							<h3>Makanan & Minuman</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-list-layout-2.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-bullhorn"></i>
+							<i class="icon-line-awesome-cube"></i>
 						</div>
 						<div class="category-box-counter">125</div>
 						<div class="category-box-content">
-							<h3>Digital Marketing</h3>
-							<p>Darketing Analyst, Social Profile Admin & More</p>
+							<h3>Produk Konsumen</h3>
 						</div>
 					</a>
 
 					<!-- Category Box -->
 					<a href="jobs-grid-layout-full-page.html" class="category-box">
 						<div class="category-box-icon">
-							<i class="icon-line-awesome-graduation-cap"></i>
+							<i class="icon-line-awesome-building"></i>
 						</div>
 						<div class="category-box-counter">445</div>
 						<div class="category-box-content">
-							<h3>Education & Training</h3>
-							<p>Advisor, Coach, Education Coordinator & More</p>
+							<h3>Konstruksi</h3>
+						</div>
+                    </a>
+                    
+                    <!-- Category Box -->
+					<a href="jobs-grid-layout-full-page.html" class="category-box">
+						<div class="category-box-icon">
+							<i class="icon-line-awesome-mortar-board"></i>
+						</div>
+						<div class="category-box-counter">955</div>
+						<div class="category-box-content">
+							<h3>Pendidikan</h3>
+						</div>
+                    </a>
+                    
+                    <!-- Category Box -->
+					<a href="jobs-grid-layout-full-page.html" class="category-box">
+						<div class="category-box-icon">
+							<i class="icon-line-awesome-medkit"></i>
+						</div>
+						<div class="category-box-counter">201</div>
+						<div class="category-box-content">
+							<h3>Farmasi</h3>
+						</div>
+                    </a>
+                    
+                    <!-- Category Box -->
+					<a href="jobs-grid-layout-full-page.html" class="category-box">
+						<div class="category-box-icon">
+							<i class="icon-line-awesome-home"></i>
+						</div>
+						<div class="category-box-counter">5</div>
+						<div class="category-box-content">
+							<h3>Properti</h3>
+						</div>
+                    </a>
+                    
+                    <!-- Category Box -->
+					<a href="jobs-grid-layout-full-page.html" class="category-box">
+						<div class="category-box-icon">
+							<i class="icon-line-awesome-smile-o"></i>
+						</div>
+						<div class="category-box-counter">45</div>
+						<div class="category-box-content">
+							<h3>Servis</h3>
 						</div>
 					</a>
 
@@ -127,8 +236,8 @@
 				
 				<!-- Section Headline -->
 				<div class="section-headline margin-top-0 margin-bottom-35">
-					<h3>Featured Jobs</h3>
-					<a href="jobs-list-layout-full-page-map.html" class="headline-link">Browse All Jobs</a>
+					<h3>Lowongan Terbaru</h3>
+					<a href="jobs-list-layout-full-page-map.html" class="headline-link">Cari Semua Lowongan</a>
 				</div>
 				
 				<!-- Jobs Container -->

@@ -12,14 +12,14 @@
 		  	<div class="left-side">
 				<!-- Logo -->
 				<div id="logo">
-					<?= Html::a(Html::img('@web/themes/images/logo.png'), 'site/index') ?>
+					<?= Html::a(Html::img('@web/themes/images/logo.png'), Yii::$app->homeUrl) ?>
 			  	</div>
    				<!-- Main Navigation -->
     			<nav id="navigation">
 	    			<ul id="responsive">
    						<li><a href="#">Cari Lowongan Kerja</a>
     						<ul class="dropdown-nav">
-								<li><a href="#">Semua Lowongan</a>
+								<li><?= Html::a('Semua Lowongan', 'index.php?r=site/lowongan') ?></li>
 	    						<li><a href="#">Berdasarkan Tipe</a>
 		    						<ul class="dropdown-nav">
 										<li><a href="#">Waktu Penuh</a></li>
