@@ -9,12 +9,14 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\Industri;
 
 class SiteController extends Controller
 {
     /**
      * {@inheritdoc}
      */
+    public $layout='utama';
     public function behaviors()
     {
         return [
@@ -52,6 +54,10 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    public function listBidang(){
+        
     }
 
     /**
