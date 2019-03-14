@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\SluggableBehavior;
 
 /**
  * This is the model class for table "lowongan".
@@ -55,6 +56,7 @@ class Lowongan extends \yii\db\ActiveRecord
             [['id_perusahaan'], 'exist', 'skipOnError' => true, 'targetClass' => Perusahaan::className(), 'targetAttribute' => ['id_perusahaan' => 'id']],
             [['id_kelurahan'], 'exist', 'skipOnError' => true, 'targetClass' => Kelurahan::className(), 'targetAttribute' => ['id_kelurahan' => 'id']],
             [['id_pendidikan'], 'exist', 'skipOnError' => true, 'targetClass' => Pendidikan::className(), 'targetAttribute' => ['id_pendidikan' => 'id']],
+            ['slug','safe'],
         ];
     }
 
@@ -122,5 +124,14 @@ class Lowongan extends \yii\db\ActiveRecord
     public function getPenawarans()
     {
         return $this->hasMany(Penawaran::className(), ['id_lowongan' => 'id']);
+    }
+    public function behaviors(){
+        return [
+            [
+                'class' => SluggableBehavior::className(),
+                'attribute' => 'judul',
+                //'slugAttribute' => 'slug'
+            ],
+        ];
     }
 }

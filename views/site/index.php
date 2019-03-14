@@ -251,7 +251,7 @@
 
 							<!-- Logo -->
 							<div class="job-listing-company-logo">
-								<img src="images/company-logo-01.png" alt="">
+								<img src="themes/images/company-logo-01.png" alt="">
 							</div>
 
 							<!-- Details -->
@@ -283,7 +283,7 @@
 
 							<!-- Logo -->
 							<div class="job-listing-company-logo">
-								<img src="images/company-logo-05.png" alt="">
+								<img src="themes/images/company-logo-05.png" alt="">
 							</div>
 
 							<!-- Details -->
@@ -313,7 +313,7 @@
 
 							<!-- Logo -->
 							<div class="job-listing-company-logo">
-								<img src="images/company-logo-02.png" alt="">
+								<img src="themes/images/company-logo-02.png" alt="">
 							</div>
 
 							<!-- Details -->
@@ -345,7 +345,7 @@
 
 							<!-- Logo -->
 							<div class="job-listing-company-logo">
-								<img src="images/company-logo-03.png" alt="">
+								<img src="themes/images/company-logo-03.png" alt="">
 							</div>
 
 							<!-- Details -->
@@ -376,7 +376,7 @@
 
 							<!-- Logo -->
 							<div class="job-listing-company-logo">
-								<img src="images/company-logo-05.png" alt="">
+								<img src="themes/images/company-logo-05.png" alt="">
 							</div>
 
 							<!-- Details -->

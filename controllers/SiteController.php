@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Industri;
+use app\models\Lowongan;
 
 class SiteController extends Controller
 {
@@ -54,6 +55,10 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    public function actionDashboard(){
+        return $this->render('dashboard');
     }
 
     /**
@@ -130,5 +135,16 @@ class SiteController extends Controller
 
     public function actionLowongan(){
         return $this->render('lowongan');
+    }
+    public function actionDetailLowongan($slug){
+        $lowongan = $this->findLowonganBySlug($slug);
+        return $this->render('detail-lowongan',['lowongan' => $lowongan]);
+    }
+    protected function findLowonganBySlug($slug){
+        if (($model = Lowongan::findOne(['slug' => $slug])) !== null) {
+            return $model;
+        }
+
+        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }
