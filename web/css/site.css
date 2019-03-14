@@ -103,6 +103,11 @@ a.desc:after {
         width: 100%;
         padding: 10px 15px;
     }
+    .sidenav {
+        height: auto;
+        padding: 15px;
+    }
+    .row.content {height:auto;}
 }
 
 .nav > li > form > button.logout:focus,
@@ -112,4 +117,54 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+/* Set gray background color and 100% height */
+.sidenav {
+    padding: 15px;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+.lowongan {
+    background: #f1f1f1;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.lowongan-header {
+    width: 100%;
+    padding: 10px;
+}
+.logo-perusahaan {
+    width: 85px;
+    float: left;
+}
+.logo-perusahaan img {
+    width: 75px;
+}
+.lowongan-title {
+    height: 75px;
+    width: auto;
+}
+.judul-lowongan {
+    font-size: 32px;
+    display: block;
+}
+.perusahaan {
+    font-size: 20px;
+    display: block;
+}
+.lowongan-footer{
+    padding: 0 10px 10px 10px;
+}
+.lowongan-footer ul{
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 0;
+}
+.lowongan-footer ul li{
+    display: inline-block;
+    width: 15%;
 }

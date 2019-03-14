@@ -1,410 +1,241 @@
 <?php
-	$this->title='Neang Gawe';
-	use yii\helpers\Html;
+
+/* @var $this yii\web\View */
+
+$this->title = 'Home';
+use app\models\Lowongan;
 ?>
-
-<!-- Intro Banner
-================================================== -->
-<!-- add class "disable-gradient" to enable consistent background overlay -->
-<div class="intro-banner" data-background-image="themes/images/banner.jpg">
-	<div class="container">
-		
-		<!-- Intro Headline -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="banner-headline">
-					<h3>
-						<strong>Mudah, cepat, dan terpercaya.</strong>
-						<br>
-						<span>Perusahaan kecil hingga besar mengunakan <strong class="color">Neang Gawe</strong> untuk mencari pekerja-pekerja baru.</span>
-					</h3>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Search Bar -->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="intro-banner-search-form margin-top-95">
-
-					<!-- Search Field -->
-					<div class="intro-search-field with-autocomplete">
-						<label for="autocomplete-input" class="field-title ripple-effect">Dimana?</label>
-						<div class="input-with-icon">
-							<input id="autocomplete-input" type="text" placeholder="Lokasi kerja">
-							<i class="icon-material-outline-location-on"></i>
-						</div>
-					</div>
-
-					<!-- Search Field -->
-					<div class="intro-search-field">
-						<label for ="intro-keywords" class="field-title ripple-effect">Pekerjaan apa?</label>
-						<input id="intro-keywords" type="text" placeholder="Kata kunci pekerjaan">
-					</div>
-
-					<!-- Button -->
-					<div class="intro-search-button">
-						<button class="button ripple-effect" onclick="window.location.href='jobs-list-layout-full-page-map.html'">Cari</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Stats -->
-		<div class="row">
-			<div class="col-md-12">
-				<ul class="intro-stats margin-top-45 hide-under-992px">
-					<li>
-						<strong class="counter">1,586</strong>
-						<span>Lowongan Diposting</span>
-					</li>
-					<li>
-						<strong class="counter">3,543</strong>
-						<span>Perusahaan</span>
-					</li>
-					<li>
-						<strong class="counter">1,232</strong>
-						<span>Pengguna</span>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
+  
+<div class="container-fluid text-center">    
+    <div class="row content">
+        <div class="col-md-3 sidenav">
+            <h4>Pilih Kriteria</h4><br>
+            <form action="" method="">
+                <input type="text" class="form-control" placeholder="Masukan keyword" name="keyword"><br>
+                <select name="tipe" class="form-control">
+                    <option selected disabled>--Pilih Tipe Pekerjaan--</option>
+                    <option value="waktu penuh">Waktu Penuh</option>
+                    <option value="paruh waktu">Paruh Waktu</option>
+                    <option value="kontrak">Kontrak</option>
+                    <option value="pekerja lepas">Pekerja Lepas</option>
+                    <option value="sukarelawan / magang">Sukarelawan / Magang</option>
+                </select><br>
+                <select name="tipe" class="form-control">
+                    <option selected disabled>--Pilih Pendidikan Minimal--</option>
+                    <option value="tidak bersekolah">Tidak Bersekolah</option>
+                    <option value="sd">SD</option>
+                    <option value="SMP">SMP</option>
+                    <option value="SMA / SMK sederajat">SMA / SMK sederajat</option>
+                    <option value="diploma">Diploma</option>
+                </select><br>
+                <input type="text" class="form-control" placeholder="Masukan lokasi" name="lokasi"><br>
+                <input type="number" class="form-control" placeholder="Masukan gaji minimum" name="gaji" min="0"><br>
+                <button class="btn btn-default" type="submit">Cari Lowongan</button>
+            </form>
+        </div>
+        <div class="col-md-9 text-left">
+            <?php foreach(Lowongan::find()->all() as $lowongan){ ?>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="index.php?r=site/detail" class="judul-lowongan"><?= $lowongan['judul'] ?></a>
+                        <a href="" class="perusahaan">Nama perusahaan</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> <?= $lowongan['lokasi_kerja'] ?></li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> <?= $lowongan['tipe_pekerjaan'] ?></li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. <?= $lowongan['gaji'] ?></li>
+                        <li><i class="glyphicon glyphicon-time"></i> 1 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <?php } ?>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="index.php?r=site/detail" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="index.php?r=site/detail" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="index.php?r=site/detail" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul>
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-<!-- Content
-================================================== -->
-<!-- Category Boxes -->
-<div class="section margin-top-65">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-12">
-
-				<div class="section-headline centered margin-bottom-15">
-					<h3>Kategori Industri</h3>
-				</div>
-
-				<!-- Category Boxes Container -->
-				<div class="categories-container">
-
-					<!-- Category Box -->
-					<a href="jobs-grid-layout-full-page.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-shopping-cart"></i>
-						</div>
-						<div class="category-box-counter">612</div>
-						<div class="category-box-content">
-							<h3>Perdagangan Umum</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-list-layout-full-page-map.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-bank"></i>
-						</div>
-						<div class="category-box-counter">113</div>
-						<div class="category-box-content">
-							<h3>Keuangan / Bank</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-list-layout-full-page-map.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-laptop"></i>
-						</div>
-						<div class="category-box-counter">186</div>
-						<div class="category-box-content">
-							<h3>Komputer / IT</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-list-layout-1.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-money"></i>
-						</div>
-						<div class="category-box-counter">298</div>
-						<div class="category-box-content">
-							<h3>Ritel</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-list-layout-2.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-industry"></i>
-						</div>
-						<div class="category-box-counter">549</div>						
-						<div class="category-box-content">
-							<h3>Manufaktur</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-list-layout-1.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-cutlery"></i>
-						</div>
-						<div class="category-box-counter">873</div>
-						<div class="category-box-content">
-							<h3>Makanan & Minuman</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-list-layout-2.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-cube"></i>
-						</div>
-						<div class="category-box-counter">125</div>
-						<div class="category-box-content">
-							<h3>Produk Konsumen</h3>
-						</div>
-					</a>
-
-					<!-- Category Box -->
-					<a href="jobs-grid-layout-full-page.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-building"></i>
-						</div>
-						<div class="category-box-counter">445</div>
-						<div class="category-box-content">
-							<h3>Konstruksi</h3>
-						</div>
-                    </a>
-                    
-                    <!-- Category Box -->
-					<a href="jobs-grid-layout-full-page.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-mortar-board"></i>
-						</div>
-						<div class="category-box-counter">955</div>
-						<div class="category-box-content">
-							<h3>Pendidikan</h3>
-						</div>
-                    </a>
-                    
-                    <!-- Category Box -->
-					<a href="jobs-grid-layout-full-page.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-medkit"></i>
-						</div>
-						<div class="category-box-counter">201</div>
-						<div class="category-box-content">
-							<h3>Farmasi</h3>
-						</div>
-                    </a>
-                    
-                    <!-- Category Box -->
-					<a href="jobs-grid-layout-full-page.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-home"></i>
-						</div>
-						<div class="category-box-counter">5</div>
-						<div class="category-box-content">
-							<h3>Properti</h3>
-						</div>
-                    </a>
-                    
-                    <!-- Category Box -->
-					<a href="jobs-grid-layout-full-page.html" class="category-box">
-						<div class="category-box-icon">
-							<i class="icon-line-awesome-smile-o"></i>
-						</div>
-						<div class="category-box-counter">45</div>
-						<div class="category-box-content">
-							<h3>Servis</h3>
-						</div>
-					</a>
-
-				</div>
-
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Category Boxes / End -->
-
-
-<!-- Features Jobs -->
-<div class="section gray margin-top-45 padding-top-65 padding-bottom-75">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-12">
-				
-				<!-- Section Headline -->
-				<div class="section-headline margin-top-0 margin-bottom-35">
-					<h3>Lowongan Terbaru</h3>
-					<?= Html::a('Cari Semua Lowongan', 'index.php?r=site/lowongan',$options = [ 'class' => 'headline-link']) ?>
-				</div>
-				
-				<!-- Jobs Container -->
-				<div class="listings-container compact-list-layout margin-top-35">
-					
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Logo -->
-							<div class="job-listing-company-logo">
-								<img src="themes/images/company-logo-01.png" alt="">
-							</div>
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Bilingual Event Support Specialist</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Hexagon <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Apply Button -->
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>	
-
-
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Logo -->
-							<div class="job-listing-company-logo">
-								<img src="themes/images/company-logo-05.png" alt="">
-							</div>
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Competition Law Officer</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Laxo</li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Apply Button -->
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Logo -->
-							<div class="job-listing-company-logo">
-								<img src="themes/images/company-logo-02.png" alt="">
-							</div>
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Barista and Cashier</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Coffee</li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Apply Button -->
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-					
-
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Logo -->
-							<div class="job-listing-company-logo">
-								<img src="themes/images/company-logo-03.png" alt="">
-							</div>
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">Restaurant General Manager</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> King <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Apply Button -->
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-
-					<!-- Job Listing -->
-					<a href="single-job-page.html" class="job-listing with-apply-button">
-
-						<!-- Job Listing Details -->
-						<div class="job-listing-details">
-
-							<!-- Logo -->
-							<div class="job-listing-company-logo">
-								<img src="themes/images/company-logo-05.png" alt="">
-							</div>
-
-							<!-- Details -->
-							<div class="job-listing-description">
-								<h3 class="job-listing-title">International Marketing Coordinator</h3>
-
-								<!-- Job Listing Footer -->
-								<div class="job-listing-footer">
-									<ul>
-										<li><i class="icon-material-outline-business"></i> Skyist</li>
-										<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-										<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-										<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Apply Button -->
-							<span class="list-apply-button ripple-effect">Apply Now</span>
-						</div>
-					</a>
-
-				</div>
-				<!-- Jobs Container / End -->
-
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Featured Jobs / End -->

@@ -67,7 +67,7 @@ class Lowongan extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'id_perusahaan' => 'Id Perusahaan',
+            'id_perusahaan' => 'Perusahaan',
             'judul' => 'Judul',
             'posisi' => 'Posisi',
             'tipe_pekerjaan' => 'Tipe Pekerjaan',

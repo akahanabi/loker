@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\models\Industri;
 
 AppAsset::register($this);
 ?>
@@ -20,7 +21,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <title>Neang Gawe | <?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -28,6 +29,10 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
+    $bidang=[];
+    foreach(Industri::find()->all() as $industri){
+        $bidang[]=['label' => $industri['nama'], 'url' => '#'];
+    }
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
@@ -36,11 +41,41 @@ AppAsset::register($this);
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-left'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            [
+                'label' => 'Lowongan',
+                'items' => [
+                    ['label' => 'Semua Lowongan', 'url' => '#'],
+                    [
+                        'label' => 'Berdasarkan Tipe',
+                        'items' => [
+                            ['label' => 'Waktu Penuh', 'url' => '#'],
+                            ['label' => 'Paruh Waktu', 'url' => '#'],
+                            ['label' => 'Pekerja Lepas', 'url' => '#'],
+                            ['label' => 'Kontrak', 'url' => '#'],
+                            ['label' => 'Sukarelawan', 'url' => '#'], 
+                        ],
+                    ],
+                    ['label' => 'Berdasarkan Popularitas', 'url' => '#'],
+                ],
+            ],
+            [
+                'label' => 'Perusahaan',
+                'items' => [
+                    'label' => 'Semua Perusahaan',
+                    'items' => [
+                        'label' => 'Berdasarkan Bidang',
+                        'items' => $bidang
+                    ],
+                ],
+            ],
+        ],
+    ]);
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => [
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
@@ -57,7 +92,6 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
