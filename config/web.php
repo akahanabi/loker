@@ -12,16 +12,9 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'components' => [
-        'view' => [
-            'theme' => [
-                'pathMap' => [
-                    '@app/views' => '@app/themes/loker'
-                ],
-            ],
-        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'QdFsI87T9Wo7M_kbaw9DeElsUoX5Ua70',
+            'cookieValidationKey' => 'pOw3xDR7TjNMsn7hODerlo8TwrBXHmFy',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -50,12 +43,14 @@ $config = [
             ],
         ],
         'db' => $db,
+        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
+        */
     ],
     'params' => $params,
 ];
