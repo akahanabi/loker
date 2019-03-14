@@ -15,6 +15,7 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+    public $layout='utama';
     public function behaviors()
     {
         return [
@@ -124,5 +125,8 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionLowongan(){
+        return $this->render('lowongan');
     }
 }
