@@ -126,7 +126,12 @@ a.desc:after {
 .sidenav {
     padding: 15px;
     background-color: #f1f1f1;
-    height: 100%;
+}
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 55px;
+    z-index: 1;
 }
 .lowongan {
     background: #f1f1f1;
@@ -167,4 +172,9 @@ a.desc:after {
 .list-keterangan li{
     display: inline-block;
     padding: 10px;
+}
+.sort {
+    background: #f1f1f1;
+    width: 100%;
+    margin-bottom: 10px;
 }

@@ -8,7 +8,7 @@ use app\models\Lowongan;
   
 <div class="container-fluid text-center">    
     <div class="row content">
-        <div class="col-md-3 sidenav">
+        <div class="col-md-3 sidenav sticky">
             <h4>Pilih Kriteria</h4><br>
             <form action="" method="">
                 <input type="text" class="form-control" placeholder="Masukan keyword" name="keyword"><br>
@@ -34,6 +34,20 @@ use app\models\Lowongan;
             </form>
         </div>
         <div class="col-md-9 text-left">
+            <div class="sort sticky" style="text-align: right; padding: 10px;">
+                <form action="" method="" class="form-inline">
+                    <label>Urutkan berdasarkan</label>
+                    <a href="" style="color: black"><i class="glyphicon glyphicon-sort-by-attributes"></i></a>
+                    <select type="submit" name"sort">
+                        <option></option>
+                        <option>Judul Lowongan</option>
+                        <option>Tanggal</option>
+                        <option>Perusahaan</option>
+                        <option>Gaji</option>
+                        <option>Lokasi</option>
+                    </select>
+                </form>
+            </div>
             <?php foreach(Lowongan::find()->all() as $lowongan){ ?>
             <div class="lowongan">
                 <div class="lowongan-header">
