@@ -55,7 +55,7 @@ use app\models\Lowongan;
                         <img src="themes/images/company-logo-01.png" alt="">
                     </div>
                     <div class="lowongan-title">
-                        <a href="index.php?r=site/detail" class="judul-lowongan"><?= $lowongan['judul'] ?></a>
+                        <a href="index.php?r=site/detaillowongan" class="judul-lowongan"><?= $lowongan['judul'] ?></a>
                         <a href="" class="perusahaan">Nama perusahaan</a>
                     </div>
                 </div>
@@ -76,13 +76,13 @@ use app\models\Lowongan;
                         <img src="themes/images/company-logo-01.png" alt="">
                     </div>
                     <div class="lowongan-title">
-                        <a href="index.php?r=site/detail" class="judul-lowongan">Akuntan</a>
+                        <a href="index.php?r=site/detaillowongan" class="judul-lowongan">Akuntan</a>
                         <a href="" class="perusahaan">BANK BCA</a>
                     </div>
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -96,13 +96,13 @@ use app\models\Lowongan;
                         <img src="themes/images/company-logo-01.png" alt="">
                     </div>
                     <div class="lowongan-title">
-                        <a href="index.php?r=site/detail" class="judul-lowongan">Akuntan</a>
+                        <a href="index.php?r=site/detaillowongan" class="judul-lowongan">Akuntan</a>
                         <a href="" class="perusahaan">BANK BCA</a>
                     </div>
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -116,33 +116,13 @@ use app\models\Lowongan;
                         <img src="themes/images/company-logo-01.png" alt="">
                     </div>
                     <div class="lowongan-title">
-                        <a href="index.php?r=site/detail" class="judul-lowongan">Akuntan</a>
+                        <a href="index.php?r=site/detaillowongan" class="judul-lowongan">Akuntan</a>
                         <a href="" class="perusahaan">BANK BCA</a>
                     </div>
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
-                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
-                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
-                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
-                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="lowongan">
-                <div class="lowongan-header">
-                    <div class="logo-perusahaan">
-                        <img src="themes/images/company-logo-01.png" alt="">
-                    </div>
-                    <div class="lowongan-title">
-                        <a href="" class="judul-lowongan">Akuntan</a>
-                        <a href="" class="perusahaan">BANK BCA</a>
-                    </div>
-                </div>
-                <div class="lowongan-footer">
-                    <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -162,7 +142,7 @@ use app\models\Lowongan;
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -182,7 +162,7 @@ use app\models\Lowongan;
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -202,7 +182,7 @@ use app\models\Lowongan;
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -222,7 +202,7 @@ use app\models\Lowongan;
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
@@ -242,7 +222,27 @@ use app\models\Lowongan;
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
+                        <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
+                        <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
+                        <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>
+                        <li><i class="glyphicon glyphicon-time"></i> 2 hari yang lalu</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lowongan">
+                <div class="lowongan-header">
+                    <div class="logo-perusahaan">
+                        <img src="themes/images/company-logo-01.png" alt="">
+                    </div>
+                    <div class="lowongan-title">
+                        <a href="" class="judul-lowongan">Akuntan</a>
+                        <a href="" class="perusahaan">BANK BCA</a>
+                    </div>
+                </div>
+                <div class="lowongan-footer">
+                    <p>Ini deskripsi</p>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> Bandung</li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> Waktu Penuh</li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. 5.000.000</li>

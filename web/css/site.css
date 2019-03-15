@@ -130,7 +130,7 @@ a.desc:after {
 .sticky{
     position: -webkit-sticky;
     position: sticky;
-    top: 55px;
+    top: 50px;
     z-index: 1;
 }
 .lowongan {
@@ -177,4 +177,7 @@ a.desc:after {
     background: #f1f1f1;
     width: 100%;
     margin-bottom: 10px;
+}
+.sidenav h4 {
+    text-align: center;
 }

@@ -47,7 +47,7 @@ AppAsset::register($this);
             [
                 'label' => 'Lowongan',
                 'items' => [
-                    ['label' => 'Semua Lowongan', 'url' => '#'],
+                    ['label' => 'Semua Lowongan', 'url' => ['/site/index']],
                     [
                         'label' => 'Berdasarkan Tipe',
                         'items' => [
@@ -64,7 +64,7 @@ AppAsset::register($this);
             [
                 'label' => 'Perusahaan',
                 'items' => [
-                    'label' => 'Semua Perusahaan',
+                    ['label' => 'Semua Perusahaan', 'url'=> ['site/perusahaan']],
                     'items' => [
                         'label' => 'Berdasarkan Bidang',
                         'items' => $bidang

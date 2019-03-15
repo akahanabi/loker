@@ -128,7 +128,10 @@ class SiteController extends Controller
     public function actionLowongan(){
         return $this->render('lowongan');
     }
-    public function actionDetail(){
-        return $this->render('detail');
+    public function actionDetaillowongan(){
+        return $this->render('detail-lowongan');
+    }
+    public function actionPerusahaan(){
+        return $this->render('perusahaan');
     }
 }
