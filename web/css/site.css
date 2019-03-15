@@ -156,15 +156,15 @@ a.desc:after {
     font-size: 20px;
     display: block;
 }
-.lowongan-footer{
+.lowongan-footer {
     padding: 0 10px 10px 10px;
 }
-.lowongan-footer ul{
+.list-keterangan {
     list-style-type: none;
     margin-top: 5px;
     padding: 0;
 }
-.lowongan-footer ul li{
+.list-keterangan li{
     display: inline-block;
-    width: 15%;
+    padding: 10px;
 }

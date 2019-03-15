@@ -47,7 +47,7 @@ use app\models\Lowongan;
                 </div>
                 <div class="lowongan-footer">
                     <p>Ini deskripsi</p>
-                    <ul>
+                    <ul class="list-keterangan">
                         <li><i class="glyphicon glyphicon-map-marker"></i> <?= $lowongan['lokasi_kerja'] ?></li>
                         <li><i class="glyphicon glyphicon-briefcase"></i> <?= $lowongan['tipe_pekerjaan'] ?></li>
                         <li><i class="glyphicon glyphicon-usd"></i> Rp. <?= $lowongan['gaji'] ?></li>
